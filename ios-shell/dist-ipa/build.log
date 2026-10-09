@@ -1,0 +1,39 @@
+== 环境信息 ==
+ProductName:		macOS
+ProductVersion:		14.8.9
+BuildVersion:		23J631
+Xcode 15.4
+Build version 15F31d
+iOS SDK: 17.5
+==============
+[32m==>[0m [1mDownloading bottle manifests[0m
+✔︎ Bottle Manifest xcodegen (2.46.0)
+[34m==>[0m [1mWould install 1 formula:[0m
+xcodegen
+[32m==>[0m [1mFetching downloads for: [32mxcodegen[39m[0m
+✔︎ Bottle xcodegen (2.46.0)
+[34m==>[0m [1mPouring xcodegen--2.46.0.arm64_sonoma.bottle.1.tar.gz[0m
+🍺  /opt/homebrew/Cellar/xcodegen/2.46.0: 38 files, 7.6MB
+⚙️  Generating plists...
+⚙️  Generating project...
+⚙️  Writing project...
+Created project at /Users/runner/work/xiuxian/xiuxian/ios-shell/FanrenFangzhi.xcodeproj
+Command line invocation:
+    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project FanrenFangzhi.xcodeproj -scheme FanrenFangzhi -configuration Release -sdk iphoneos -derivedDataPath build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=NO build
+
+User defaults from command line:
+    IDEDerivedDataPathOverride = /Users/runner/work/xiuxian/xiuxian/ios-shell/build
+    IDEPackageSupportUseBuiltinSCM = YES
+
+Build settings from command line:
+    CODE_SIGN_IDENTITY = 
+    CODE_SIGNING_ALLOWED = NO
+    CODE_SIGNING_REQUIRED = NO
+    ONLY_ACTIVE_ARCH = NO
+    SDKROOT = iphoneos17.5
+
+2026-10-09 14:08:44.785 xcodebuild[2883:11729] Writing error result bundle to /var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/ResultBundle_2026-09-10_14-08-0044.xcresult
+xcodebuild: error: Unable to read project 'FanrenFangzhi.xcodeproj'.
+	Reason: The project ‘FanrenFangzhi’ cannot be opened because it is in a future Xcode project file format (77). Adjust the project format using a compatible version of Xcode to allow it to be opened by this version of Xcode.
+
+
