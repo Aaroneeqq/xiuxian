@@ -29,7 +29,9 @@ defaults:
 
 jobs:
   build:
-    runs-on: macos-14
+    # macos-14 自带 Xcode 15.4，读不了 XcodeGen 2.46 默认产出的新工程格式(objectVersion 77)
+    # ⇒ 用 macos-15（Xcode 16.x），并在下面再做一次格式降级保险
+    runs-on: macos-15
     timeout-minutes: 40
 
     steps:
@@ -72,6 +74,25 @@ jobs:
         run: |
           set -o pipefail
           xcodegen generate --spec project.yml 2>&1 | tee -a dist-ipa/build.log
+          PBX="FanrenFangzhi.xcodeproj/project.pbxproj"
+          {
+            echo "--- 工程 objectVersion ---"
+            grep -m1 -o "objectVersion = [0-9]*;" "$PBX" || true
+          } 2>&1 | tee -a dist-ipa/build.log
+          CUR=$(grep -m1 -o "objectVersion = [0-9]*;" "$PBX" | grep -o "[0-9]*" | head -1)
+          if [ -n "$CUR" ] && [ "$CUR" -gt 56 ]; then
+            if grep -q "PBXFileSystemSynchronizedRootGroup" "$PBX"; then
+              echo "!! 工程用了 Xcode16 的同步组，不能降级（当前 runner 必须 >= Xcode 16）" | tee -a dist-ipa/build.log
+            else
+              echo "把 objectVersion $CUR 降级为 56（Xcode 15 兼容）" | tee -a dist-ipa/build.log
+              sed -i '' "s/objectVersion = $CUR;/objectVersion = 56;/" "$PBX"
+              grep -m1 -o "objectVersion = [0-9]*;" "$PBX" | tee -a dist-ipa/build.log || true
+            fi
+          fi
+          {
+            echo "--- 工程里的 scheme/target ---"
+            xcodebuild -list -project FanrenFangzhi.xcodeproj
+          } 2>&1 | tee -a dist-ipa/build.log
 
       - name: 编译（不签名）
         run: |
