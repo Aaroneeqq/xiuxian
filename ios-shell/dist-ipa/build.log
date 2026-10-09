@@ -1,10 +1,11 @@
+run-stamp: 20261009T151858Z  runner=macOS/ARM64  sha=95b1d16b5d652986ecbd5649c06c49c34225b661
 == 环境信息 ==
 ProductName:		macOS
-ProductVersion:		14.8.9
-BuildVersion:		23J631
-Xcode 15.4
-Build version 15F31d
-iOS SDK: 17.5
+ProductVersion:		15.7.9
+BuildVersion:		24G830
+Xcode 16.4
+Build version 16F6
+iOS SDK: 18.5
 ==============
 [32m==>[0m [1mDownloading bottle manifests[0m
 ✔︎ Bottle Manifest xcodegen (2.46.0)
@@ -12,28 +13,314 @@ iOS SDK: 17.5
 xcodegen
 [32m==>[0m [1mFetching downloads for: [32mxcodegen[39m[0m
 ✔︎ Bottle xcodegen (2.46.0)
-[34m==>[0m [1mPouring xcodegen--2.46.0.arm64_sonoma.bottle.1.tar.gz[0m
-🍺  /opt/homebrew/Cellar/xcodegen/2.46.0: 38 files, 7.6MB
+[34m==>[0m [1mPouring xcodegen--2.46.0.arm64_sequoia.bottle.1.tar.gz[0m
+🍺  /opt/homebrew/Cellar/xcodegen/2.46.0: 38 files, 7.5MB
 ⚙️  Generating plists...
 ⚙️  Generating project...
 ⚙️  Writing project...
 Created project at /Users/runner/work/xiuxian/xiuxian/ios-shell/FanrenFangzhi.xcodeproj
+--- 工程 objectVersion ---
+objectVersion = 77;
+把 objectVersion 77 降级为 56（Xcode 15 兼容）
+objectVersion = 56;
+--- 工程里的 scheme/target ---
 Command line invocation:
-    /Applications/Xcode_15.4.app/Contents/Developer/usr/bin/xcodebuild -project FanrenFangzhi.xcodeproj -scheme FanrenFangzhi -configuration Release -sdk iphoneos -derivedDataPath build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=NO build
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild -list -project FanrenFangzhi.xcodeproj
 
-User defaults from command line:
-    IDEDerivedDataPathOverride = /Users/runner/work/xiuxian/xiuxian/ios-shell/build
-    IDEPackageSupportUseBuiltinSCM = YES
+Information about project "FanrenFangzhi":
+    Targets:
+        FanrenFangzhi
+
+    Build Configurations:
+        Debug
+        Release
+
+    If no build configuration is specified and -scheme is not passed then "Debug" is used.
+
+    Schemes:
+        FanrenFangzhi
+
+Command line invocation:
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild -project FanrenFangzhi.xcodeproj -scheme FanrenFangzhi -configuration Release -sdk iphoneos -derivedDataPath build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=NO build
 
 Build settings from command line:
     CODE_SIGN_IDENTITY = 
     CODE_SIGNING_ALLOWED = NO
     CODE_SIGNING_REQUIRED = NO
     ONLY_ACTIVE_ARCH = NO
-    SDKROOT = iphoneos17.5
+    SDKROOT = iphoneos18.5
 
-2026-10-09 14:08:44.785 xcodebuild[2883:11729] Writing error result bundle to /var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/ResultBundle_2026-09-10_14-08-0044.xcresult
-xcodebuild: error: Unable to read project 'FanrenFangzhi.xcodeproj'.
-	Reason: The project ‘FanrenFangzhi’ cannot be opened because it is in a future Xcode project file format (77). Adjust the project format using a compatible version of Xcode to allow it to be opened by this version of Xcode.
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:8f6df0ee8ee6eeb5f56db26435bdd81e757f0e0f, name:My Mac }
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+note: Using codesigning identity override: 
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'FanrenFangzhi' in project 'FanrenFangzhi' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/runner/work/xiuxian/xiuxian/ios-shell/Sources/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 8ec8d230184eb617c7f86a9e14720f52
+Build description path: /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/XCBuildData/8ec8d230184eb617c7f86a9e14720f52.xcbuilddata
+CreateBuildDirectory /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell/FanrenFangzhi.xcodeproj
+    builtin-create-build-directory /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products
+
+ClangStatCache /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk /Users/runner/work/xiuxian/xiuxian/ios-shell/build/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell/FanrenFangzhi.xcodeproj
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -o /Users/runner/work/xiuxian/xiuxian/ios-shell/build/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache
+
+CreateBuildDirectory /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell/FanrenFangzhi.xcodeproj
+    builtin-create-build-directory /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex
+
+CreateBuildDirectory /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell/FanrenFangzhi.xcodeproj
+    builtin-create-build-directory /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi-589344212016c065dbb81a50e5bfac34-VFS-iphoneos/all-product-headers.yaml
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell/FanrenFangzhi.xcodeproj
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi-589344212016c065dbb81a50e5bfac34-VFS-iphoneos/all-product-headers.yaml
+
+CreateBuildDirectory /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell/FanrenFangzhi.xcodeproj
+    builtin-create-build-directory /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.SwiftFileList (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.SwiftFileList
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi_const_extract_protocols.json (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.SwiftConstValuesFileList (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.LinkFileList (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.LinkFileList
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi-OutputFileMap.json (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi.hmap (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi.hmap
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi.DependencyStaticMetadataFileList (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi.DependencyMetadataFileList (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-project-headers.hmap (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-project-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-own-target-headers.hmap (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-generated-files.hmap (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-generated-files.hmap
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-all-target-headers.hmap (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-all-non-framework-target-headers.hmap (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    write-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-all-non-framework-target-headers.hmap
+
+MkDir /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    /bin/mkdir -p /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app
+
+MkDir /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_output/unthinned (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    /bin/mkdir -p /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_output/unthinned
+
+MkDir /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_output/thinned (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    /bin/mkdir -p /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_output/thinned
+
+GenerateAssetSymbols /Users/runner/work/xiuxian/xiuxian/ios-shell/Sources/Assets.xcassets (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool /Users/runner/work/xiuxian/xiuxian/ios-shell/Sources/Assets.xcassets --compile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app --output-format human-readable-text --notices --warnings --export-dependency-info /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_dependencies --output-partial-info-plist /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_generated_info.plist --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 14.0 --platform iphoneos --bundle-identifier com.xxj.fanrenfangzhi --generate-swift-asset-symbol-extensions NO --generate-swift-asset-symbols /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/GeneratedAssetSymbols.h
+/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/GeneratedAssetSymbols.swift
 
 
+CompileAssetCatalogVariant thinned /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app /Users/runner/work/xiuxian/xiuxian/ios-shell/Sources/Assets.xcassets (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool /Users/runner/work/xiuxian/xiuxian/ios-shell/Sources/Assets.xcassets --compile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 14.0 --platform iphoneos
+/* com.apple.actool.compilation-results */
+/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_generated_info.plist_thinned
+/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_output/thinned/Assets.car
+
+
+SwiftDriver FanrenFangzhi normal arm64 com.apple.xcode.tools.swift.compiler (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-SwiftDriver -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name FanrenFangzhi -O -whole-module-optimization -enforce-exclusivity\=checked @/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -target arm64-apple-ios14.0 -g -module-cache-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos -F /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos -c -num-threads 3 -Xcc -ivfsstatcache -Xcc /Users/runner/work/xiuxian/xiuxian/ios-shell/build/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache -output-file-map /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-generated-files.hmap -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-own-target-headers.hmap -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-project-headers.hmap -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi-Swift.h -working-directory /Users/runner/work/xiuxian/xiuxian/ios-shell -no-emit-module-separately-wmo
+
+SwiftCompile normal arm64 Compiling\ AppDelegate.swift,\ WebViewController.swift,\ GeneratedAssetSymbols.swift /Users/runner/work/xiuxian/xiuxian/ios-shell/Sources/AppDelegate.swift /Users/runner/work/xiuxian/xiuxian/ios-shell/Sources/WebViewController.swift /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+
+CompileSwift normal arm64 (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    
+
+SwiftDriver\ Compilation FanrenFangzhi normal arm64 com.apple.xcode.tools.swift.compiler (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-Swift-Compilation -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name FanrenFangzhi -O -whole-module-optimization -enforce-exclusivity\=checked @/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -target arm64-apple-ios14.0 -g -module-cache-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos -F /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos -c -num-threads 3 -Xcc -ivfsstatcache -Xcc /Users/runner/work/xiuxian/xiuxian/ios-shell/build/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache -output-file-map /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-generated-files.hmap -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-own-target-headers.hmap -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-project-headers.hmap -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi-Swift.h -working-directory /Users/runner/work/xiuxian/xiuxian/ios-shell -no-emit-module-separately-wmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling AppDelegate.swift, WebViewController.swift, GeneratedAssetSymbols.swift (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+
+SwiftDriver\ Compilation\ Requirements FanrenFangzhi normal arm64 com.apple.xcode.tools.swift.compiler (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name FanrenFangzhi -O -whole-module-optimization -enforce-exclusivity\=checked @/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -target arm64-apple-ios14.0 -g -module-cache-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos -F /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos -c -num-threads 3 -Xcc -ivfsstatcache -Xcc /Users/runner/work/xiuxian/xiuxian/ios-shell/build/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache -output-file-map /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-generated-files.hmap -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-own-target-headers.hmap -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi-project-headers.hmap -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi-Swift.h -working-directory /Users/runner/work/xiuxian/xiuxian/ios-shell -no-emit-module-separately-wmo
+
+SwiftMergeGeneratedHeaders /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/FanrenFangzhi-Swift.h /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi-Swift.h (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-swiftHeaderTool -arch arm64 /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi-Swift.h -o /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/DerivedSources/FanrenFangzhi-Swift.h
+
+Copy /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.swiftmodule/arm64-apple-ios.swiftmodule /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.swiftmodule (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.swiftmodule /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.swiftmodule/arm64-apple-ios.swiftmodule
+
+Copy /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.swiftmodule/arm64-apple-ios.swiftdoc /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.swiftdoc (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.swiftdoc /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.swiftmodule/arm64-apple-ios.swiftdoc
+
+Copy /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.swiftmodule/arm64-apple-ios.abi.json /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.abi.json (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.abi.json /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.swiftmodule/arm64-apple-ios.abi.json
+
+Copy /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.swiftsourceinfo (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.swiftsourceinfo /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo
+
+Ld /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/FanrenFangzhi normal (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios14.0 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -Os -L/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos -L/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos -F/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos -F/Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos -filelist /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/Frameworks -dead_strip -Xlinker -object_path_lto -Xlinker /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi_lto.o -Xlinker -dependency_info -Xlinker /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.swiftmodule -o /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/FanrenFangzhi
+
+LinkAssetCatalog /Users/runner/work/xiuxian/xiuxian/ios-shell/Sources/Assets.xcassets (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-linkAssetCatalog --thinned /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_output/thinned --thinned-dependencies /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_generated_info.plist_thinned --unthinned /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_output/unthinned --unthinned-dependencies /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_generated_info.plist_unthinned --output /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app --plist-output /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_generated_info.plist
+note: Emplaced /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/AppIcon60x60@2x.png (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+note: Emplaced /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/AppIcon76x76@2x~ipad.png (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+note: Emplaced /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/Assets.car (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+
+ProcessInfoPlistFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/Info.plist /Users/runner/work/xiuxian/xiuxian/ios-shell/Info.plist (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-infoPlistUtility /Users/runner/work/xiuxian/xiuxian/ios-shell/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -additionalcontentfile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/assetcatalog_generated_info.plist -requiredArchitecture arm64 -o /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/Info.plist
+
+ExtractAppIntentsMetadata (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name FanrenFangzhi --sdk-root /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk --xcode-version 16F6 --platform-family iOS --deployment-target 14.0 --bundle-identifier com.xxj.fanrenfangzhi --output /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app --target-triple arm64-apple-ios14.0 --binary-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/FanrenFangzhi --dependency-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi_dependency_info.dat --stringsdata-file /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.SwiftFileList --metadata-file-list /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi.DependencyMetadataFileList --static-metadata-file-list /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/Objects-normal/arm64/FanrenFangzhi.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-10-09 15:19:24.476 appintentsmetadataprocessor[12983:42391] Starting appintentsmetadataprocessor export
+2026-10-09 15:19:24.482 appintentsmetadataprocessor[12983:42391] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+CopySwiftLibs /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/FanrenFangzhi --scan-folder /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/Frameworks --scan-folder /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/PlugIns --scan-folder /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/SystemExtensions --scan-folder /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/Extensions --platform iphoneos --toolchain /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-concurrency
+Ignoring --strip-bitcode because --sign was not passed
+
+GenerateDSYMFile /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app.dSYM /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/FanrenFangzhi (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/FanrenFangzhi -o /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app.dSYM
+
+AppIntentsSSUTraining (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/Info.plist --temp-dir-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/ssu --bundle-id com.xxj.fanrenfangzhi --product-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app --extracted-metadata-path /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app/Metadata.appintents --metadata-file-list /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Intermediates.noindex/FanrenFangzhi.build/Release-iphoneos/FanrenFangzhi.build/FanrenFangzhi.DependencyMetadataFileList --archive-ssu-assets
+2026-10-09 15:19:24.533 appintentsnltrainingprocessor[13002:42427] Parsing options for appintentsnltrainingprocessor
+2026-10-09 15:19:24.535 appintentsnltrainingprocessor[13002:42427] No AppShortcuts found - Skipping.
+
+RegisterExecutionPolicyException /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-RegisterExecutionPolicyException /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app
+
+Validate /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    builtin-validationUtility /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app -infoplist-subpath Info.plist
+
+Touch /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+    cd /Users/runner/work/xiuxian/xiuxian/ios-shell
+    /usr/bin/touch -c /Users/runner/work/xiuxian/xiuxian/ios-shell/build/Build/Products/Release-iphoneos/FanrenFangzhi.app
+
+note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FanrenFangzhi' from project 'FanrenFangzhi')
+** BUILD SUCCEEDED **
+
+--- app bundle ---
+total 3848
+drwxr-xr-x  8 runner  staff      256 Oct  9 15:19 .
+drwxr-xr-x@ 5 runner  staff      160 Oct  9 15:19 ..
+-rw-r--r--  1 runner  staff    33052 Oct  9 15:19 AppIcon60x60@2x.png
+-rw-r--r--  1 runner  staff    52404 Oct  9 15:19 AppIcon76x76@2x~ipad.png
+-rw-r--r--  1 runner  staff  1747935 Oct  9 15:19 Assets.car
+-rwxr-xr-x  1 runner  staff   121680 Oct  9 15:19 FanrenFangzhi
+-rw-r--r--  1 runner  staff     1627 Oct  9 15:19 Info.plist
+-rw-r--r--  1 runner  staff        8 Oct  9 15:19 PkgInfo
+--- Info.plist 关键项 ---
+com.xxj.fanrenfangzhi
+1.0
+http://134.175.237.206:3000
+--- 图标资源 ---
+-rw-r--r--  1 runner  staff    33052 Oct  9 15:19 AppIcon60x60@2x.png
+-rw-r--r--  1 runner  staff    52404 Oct  9 15:19 AppIcon76x76@2x~ipad.png
+-rw-r--r--  1 runner  staff  1747935 Oct  9 15:19 Assets.car
+--- ipa ---
+total 3656
+drwxr-xr-x   4 runner  staff      128 Oct  9 15:19 .
+drwxr-xr-x  11 runner  staff      352 Oct  9 15:19 ..
+-rw-r--r--   1 runner  staff    49530 Oct  9 15:19 build.log
+-rw-r--r--   1 runner  staff  1816702 Oct  9 15:19 FanrenFangzhi-unsigned.ipa
+--- sha256 ---
+b8d96f85674d64dead29e5c339f1052ab9e3e94ff389108b933ac4a8b69ee361  dist-ipa/FanrenFangzhi-unsigned.ipa
+--- ipa 内部结构（前 20 行）---
+Archive:  FanrenFangzhi-unsigned.ipa
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+        0  10-09-2026 15:19   Payload/
+        0  10-09-2026 15:19   Payload/FanrenFangzhi.app/
+    33052  10-09-2026 15:19   Payload/FanrenFangzhi.app/AppIcon60x60@2x.png
+   121680  10-09-2026 15:19   Payload/FanrenFangzhi.app/FanrenFangzhi
+  1747935  10-09-2026 15:19   Payload/FanrenFangzhi.app/Assets.car
+    52404  10-09-2026 15:19   Payload/FanrenFangzhi.app/AppIcon76x76@2x~ipad.png
+     1627  10-09-2026 15:19   Payload/FanrenFangzhi.app/Info.plist
+        8  10-09-2026 15:19   Payload/FanrenFangzhi.app/PkgInfo
+---------                     -------
+  1956706                     8 files
