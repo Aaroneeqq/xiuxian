@@ -1,0 +1,60 @@
+# XcodeGen 工程描述 —— 凡人放置 iOS 远程壳
+# 云端 macOS 用它生成 .xcodeproj，再 xcodebuild 出**未签名** IPA。
+name: FanrenFangzhi
+
+options:
+  bundleIdPrefix: com.xxj
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "14.0"
+
+targets:
+  FanrenFangzhi:
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Sources
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: 凡人放置
+        CFBundleName: FanrenFangzhi
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        LSRequiresIPhoneOS: true
+        UIRequiresFullScreen: true
+        UIStatusBarHidden: true
+        UIViewControllerBasedStatusBarAppearance: false
+        UILaunchScreen: {}
+        UIApplicationSupportsIndirectInputEvents: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        # 服务器是 http（无证书），必须放开 ATS，否则 WKWebView 拒绝加载
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+          NSAllowsArbitraryLoadsInWebContent: true
+          NSAllowsLocalNetworking: true
+        # 游戏地址（改这里即可换服务器，不用动 Swift）
+        XXJHomeURL: "http://134.175.237.206:3000"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.xxj.fanrenfangzhi
+        PRODUCT_NAME: FanrenFangzhi
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ENABLE_BITCODE: "NO"
+        # ★ 未签名编译：越狱设备 / TrollStore 直接装
+        CODE_SIGN_IDENTITY: ""
+        CODE_SIGNING_REQUIRED: "NO"
+        CODE_SIGNING_ALLOWED: "NO"
+        DEVELOPMENT_TEAM: ""
+        ONLY_ACTIVE_ARCH: "NO"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
