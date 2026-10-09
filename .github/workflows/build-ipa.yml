@@ -42,6 +42,7 @@ jobs:
           mkdir -p dist-ipa
           : > dist-ipa/build.log
           {
+            echo "run-stamp: $(date -u +%Y%m%dT%H%M%SZ)  runner=${RUNNER_OS:-?}/${RUNNER_ARCH:-?}  sha=${GITHUB_SHA:-?}"
             echo "== 环境信息 =="
             sw_vers
             xcodebuild -version
